@@ -1,0 +1,68 @@
+
+.Header {
+    height: 90vh;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgba(90, 89, 89, 0.788), rgba(99, 98, 98, 0.8)), url('https://img-0.journaldunet.com/TUIoMZoSVMCDMXl0WUNfotBBS8U=/1280x/smart/2b7b473c1ebe416ead81f3f6179a1d75/ccmcms-jdn/11436203.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-box {
+   
+    width: 600px;
+    padding: 80px;
+    margin-top: 0vh;
+    height: 200px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+}
+
+.plan-trip{
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.request-form{
+    display: flex;
+    margin: 0 auto;
+    width: 60%;
+    height: 55px;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 15px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.3) 0px 3px 15px;
+}
+
+
+.slogan-header{
+    padding: 0;
+    margin: 0;
+    font-size: 52px;
+    line-height: 52px;
+    font-weight: 800;
+}
+
+text-header{
+    width: 360px;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    margin-top: 31px;
+}
