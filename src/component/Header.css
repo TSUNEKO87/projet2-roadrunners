@@ -1,40 +1,46 @@
 
 .Header {
-    height: 90vh;
+    height: 92vh;
     width: 100%;
     padding: 20px;
     display: flex;
     align-items: center;
-    background-image: linear-gradient(to bottom, rgba(90, 89, 89, 0.788), rgba(99, 98, 98, 0.8)), url('https://img-0.journaldunet.com/TUIoMZoSVMCDMXl0WUNfotBBS8U=/1280x/smart/2b7b473c1ebe416ead81f3f6179a1d75/ccmcms-jdn/11436203.jpg');
+    background-image: url('https://img-0.journaldunet.com/TUIoMZoSVMCDMXl0WUNfotBBS8U=/1280x/smart/2b7b473c1ebe416ead81f3f6179a1d75/ccmcms-jdn/11436203.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: black;
     flex-direction: column;
     justify-content: space-between;
+    
 }
+
 
 .header-box {
    
-    width: 600px;
-    padding: 80px;
-    margin-top: 0vh;
-    height: 200px;
-    margin-right: auto;
+    width: 100%;
+    padding: 160px;
+    margin-top: -3vh;
+    height: 300px;
+    margin-right: -173px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: #ebebebd0;
+    
    
 }
 
 .plan-trip{
     display: flex;
     flex-direction: column;
-    background-color: burlywood;
+    background-color: #F5A25D;
     height: 100px;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 20px;
+    margin-bottom: -20px;
+    border:3px solid #FA7F72;
 }
 
 .request-form{
@@ -58,8 +64,7 @@
     line-height: 52px;
     font-weight: 800;
 }
-
-text-header{
+.text-header{
     width: 360px;
     padding: 0;
     margin: 0;
