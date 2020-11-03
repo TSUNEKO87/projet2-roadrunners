@@ -2,26 +2,25 @@
 .Header {
     height: 92vh;
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     display: flex;
     align-items: center;
-    background-image: url('https://img-0.journaldunet.com/TUIoMZoSVMCDMXl0WUNfotBBS8U=/1280x/smart/2b7b473c1ebe416ead81f3f6179a1d75/ccmcms-jdn/11436203.jpg');
+    background-image:  url('https://img-0.journaldunet.com/TUIoMZoSVMCDMXl0WUNfotBBS8U=/1280x/smart/2b7b473c1ebe416ead81f3f6179a1d75/ccmcms-jdn/11436203.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
+    color: black; 
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 
-.header-box {
+.header-box{  /*grey opacity*/
    
     width: 100%;
-    padding: 160px;
-    margin-top: -3vh;
-    height: 300px;
-    margin-right: -173px;
+    padding: 0px;
+    margin-top: 0px;
+    height: 645px;
+    margin-right: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -30,6 +29,7 @@
    
 }
 
+   
 .plan-trip{
     display: flex;
     flex-direction: column;
@@ -38,16 +38,16 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     margin-bottom: -20px;
     border:3px solid #FA7F72;
 }
 
-.request-form{
+.RequestForm{
     display: flex;
-    margin: 0 auto;
+    margin: 0px;
     width: 60%;
-    height: 55px;
+    height: 100px;
     align-items: center;
     justify-content: space-around;
     border: 1px solid rgb(221, 221, 221);
@@ -58,16 +58,16 @@
 
 
 .slogan-header{
-    padding: 0;
-    margin: 0;
-    font-size: 52px;
+    padding: 20px;
+    margin: 50px;
+    font-size: 60px;
     line-height: 52px;
     font-weight: 800;
 }
 .text-header{
     width: 360px;
-    padding: 0;
-    margin: 0;
+    padding: 20px;
+    margin: 50px;
     font-size: 18px;
     margin-top: 31px;
 }
