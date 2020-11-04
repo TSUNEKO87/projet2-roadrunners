@@ -19,8 +19,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 45.76875,
-  lng: 4.775888,
+  lat: 50.8466,
+  lng: 4.3528,
 };
 
 const options = {
@@ -54,25 +54,22 @@ class Map extends Component {
     }
   };
 
-  // checkDriving({ target: { checked } }) {
-  //   checked &&
-  //     this.setState(() => ({
-  //       travelMode: "DRIVING",
-  //     }));
-  // }
+  checkDriving({ target: { checked } }) {
+    checked && this.setState(() => ({ travelMode: "DRIVING" }));
+  }
 
-  // getOrigin = (ref) => {
-  //   ref = this.state.origin;
-  // };
-  // getDestination = (ref) => {
-  //   ref = this.state.destination;
-  // };
+  getOrigin = (ref) => {
+    this.origin = ref;
+  };
+  getDestination = (ref) => {
+    this.destination = ref;
+  };
 
   onClick = () => {
-    if (this.state.origin.value !== "" && this.state.destination.value !== "") {
+    if (this.origin.value !== "" && this.destination.value !== "") {
       this.setState({
-        origin: this.state.origin.value,
-        destination: this.state.destination.value,
+        origin: this.origin.value,
+        destination: this.destination.value,
       });
     }
   };
@@ -94,7 +91,7 @@ class Map extends Component {
                   id="ORIGIN"
                   className="form-control"
                   type="text"
-                  ref={this.state.origin} //getOrigin
+                  ref={this.getOrigin}
                 />
               </div>
             </div>
@@ -106,7 +103,7 @@ class Map extends Component {
                   id="DESTINATION"
                   className="form-control"
                   type="text"
-                  ref={this.state.destination} //getDestination
+                  ref={this.getDestination}
                 />
               </div>
             </div>
@@ -124,7 +121,23 @@ class Map extends Component {
             zoom={10}
             mapContainerStyle={containerStyle}
             options={options}
-          ></GoogleMap>
+          >
+            {this.state.origin !== "" && this.state.destination !== "" && (
+              <DirectionsService
+                options={{
+                  destination: this.state.destination,
+                  origin: this.state.origin,
+                  travelMode: this.state.travelMode,
+                }}
+                callback={this.directionsCallback}
+              />
+            )}
+            {this.state.response !== null && (
+              <DirectionsRenderer
+                options={{ directions: this.state.response }}
+              />
+            )}
+          </GoogleMap>
         </div>
       </LoadScript>
     );
