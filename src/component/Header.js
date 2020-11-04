@@ -13,6 +13,7 @@ class Header extends Component{
                     <div className="text-header">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>Phasellus condimentum, tortor id venenatis imperdiet, dolor mi dignissim lacus,<br/>ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam et nisl libero.<br/></p>
                     </div>
+                    
                 </header>
                 <PlanTrip/>
           </div>
