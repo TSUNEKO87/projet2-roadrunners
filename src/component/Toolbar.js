@@ -4,14 +4,27 @@ import './Toolbar.css';
 class Toolbar extends React.Component {
     constructor(props){
         super(props)
-        this.state={
-            start:'',
-            end: '',
+        this.state = {
+             journey : [{
+                 name: 'ibis Hotel à Athenes',
+                 type: 'Hostel' 
+
+             }, {
+                 name: 'Musee de la ville de bruxelles',
+                 type: 'Activity'
+
+             }, {
+                 name: 'Restaurant vallee del sacco',
+                 type: 'Restaurant'
+
+             }, {
+                 name: 'Dolce&Gabbana',
+                 type: 'shopping'
+             }]
+            
         }
 
         
-
-
     }
     render() {
         return (

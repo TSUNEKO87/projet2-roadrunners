@@ -32,7 +32,6 @@ function App() {
                         <Roadpage />
                     </Route>
                 </Switch>
-                <Toolbar/>
             </div>
     </div>
   );

@@ -22,8 +22,8 @@ class RequestForm extends Component{
 
       handleSubmit =(e) => {
         e.preventDefault()
-        this.props.history.push("/application");
-        console.log(this.props.history);
+        this.props.history.push('/application', {...this.state});
+
          console.log( 'your favorite city is'  +  this.state.start +  'and'  + this.state.end )
       }   
       
