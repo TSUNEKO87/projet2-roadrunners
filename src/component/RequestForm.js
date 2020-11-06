@@ -5,8 +5,8 @@ class RequestForm extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            start: 'ddd',
-            end: 'cdddd'
+            start: '',
+            end: ''
           };
         
       }

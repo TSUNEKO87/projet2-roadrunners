@@ -1,0 +1,24 @@
+.toolbar {
+    background-color: rgb(56, 147, 147);
+    height: 8vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.start{
+    height: 30px;
+    width: 30px;
+}
+
+.end{
+    height: 30px;
+    width: 30px;
+    
+}
