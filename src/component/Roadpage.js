@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Map from './Map.js';
 
 
 
@@ -6,7 +7,7 @@ import React, {Component} from 'react';
 function Roadpage(props) {
     return(
         <>
-            {/* Kacper's map composent */}
+            <Map />
         </>
     )
 }

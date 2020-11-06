@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import {withRouter} from 'react-router-dom';
+import {Link, Redirect, withRouter} from 'react-router-dom';
+import Map from './Map.js';
 
 class RequestForm extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            start: 'ddd',
-            end: 'cdddd'
+            start: '',
+            end: ''
           };
         
       }
@@ -17,14 +18,15 @@ class RequestForm extends Component{
         this.setState({
           [name]: e.target.value   /*dinamique key creation ES6*/
         });
+
       }
 
 
       handleSubmit =(e) => {
         e.preventDefault()
-        this.props.history.push("/application");
-        console.log(this.props.history);
+        this.props.history.push("/application", {...this.state});
          console.log( 'your favorite city is'  +  this.state.start +  'and'  + this.state.end )
+
       }   
       
       render() {

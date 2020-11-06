@@ -4,24 +4,16 @@ import {
   Link
 } from "react-router-dom";
 import React from 'react';
-import Navbar from './component/Navbar'
-import Footer from './component/Footer'
+import Navbar from './component/Navbar';
 import Homepage from './component/Homepage';
-import Map from "./component/Map";
+import Map from "./component/Map.js";
 
 
 function App() {
 
-  function TestRouter () {
-    return(
-        <p>This is a test</p>
-    )
-}
-
   return (
     <div className="App">
             <div>
-             <Map />
     
               <Navbar /> 
                 <Switch>
@@ -29,7 +21,7 @@ function App() {
                       <Homepage />  
                     </Route>
                     <Route path='/application'>
-                        <TestRouter />
+                        <Map />
                     </Route>
                 </Switch>
             </div>
