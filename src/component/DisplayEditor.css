@@ -1,0 +1,11 @@
+#editor {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    width: 10vw;
+    color: blue;
+    background-color: #ebebeb;
+    border: 3px solid #f5a25d;
+    z-index: 20;
+  }
+  
