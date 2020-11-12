@@ -1,14 +1,12 @@
 import {
   Switch,
   Route,
-  Link
-} from "react-router-dom";
+} 
+from "react-router-dom";
 import React from 'react';
 import Navbar from './component/Navbar';
-import Footer from './component/Footer';
 import Homepage from './component/Homepage';
 import Roadpage from  './component/Roadpage';
-import Toolbar from "./component/Toolbar";
 
 
 function App() {

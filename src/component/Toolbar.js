@@ -1,41 +1,57 @@
 import React, {Component} from 'react';
 import './Toolbar.css';
 
-class Toolbar extends React.Component {
+class Toolbar extends Component {
     constructor(props){
         super(props)
         this.state = {
-             journey : [{
-                 name: 'ibis Hotel à Athenes',
-                 type: 'Hostel' 
+             journeys : []   
+        }    
+    }
 
-             }, {
-                 name: 'Musee de la ville de bruxelles',
-                 type: 'Activity'
-
-             }, {
-                 name: 'Restaurant vallee del sacco',
-                 type: 'Restaurant'
-
-             }, {
-                 name: 'Dolce&Gabbana',
-                 type: 'shopping'
-             }]
-            
+    addItem = (e) => {
+        e.preventDefault();
+        {/*const newStep = this.newStep.value */}
+         const newStep = {
+            id:this.state.journeys.length +1,
+            name: this.newStep.value,
+            type: ''
         }
 
-        
+
+        this.setState({
+            journeys: [...this.state.journeys, newStep]
+        })
+
     }
+
     render() {
+
+        const {journeys} = this.state;
         return (
             <div>
-            <nav className= 'toolbar'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSPbRRM8nX8B5_QDndo2eXp0OoHA1t8STh0DQ&usqp=CAU" className= 'start' />
-                <img src='https://stickeramoi.com/11157-large_default/sticker-drapeau-damier.jpg' className= 'end' />
-            </nav>
+                <form className='form-inline' onSubmit= {(e) => {this.addItem(e)}}>  {/*onsubmit permet d'ecouter la soumission du formulaire et aussi de permettre l'action d'une api*/}
+                <label htmlFor='newStepInput'>add new step</label>
+                <input ref={input => this.newStep = input} value={this.state.newStep} type='text'  placeholder='cinema' id='newStepInput'/>
+                <input type='submit' value='Start !' />
+            </form>
+            <div className= 'toolbar'>
+                <div className='start'>Start!</div>
+
+                <div className='journey'>
+                    <ul className='step'>
+                    {journeys.map((journey) =>
+                    <li key={journey.id}>
+                        <div className='circle'></div>
+                        </li>
+                    )}
+                </ul>
+                </div>
+                
+                <div className='end'>End!</div>
+                   </div>
             </div>
         )
     }
 }
-
 export default Toolbar;
