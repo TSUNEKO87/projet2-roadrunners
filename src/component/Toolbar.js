@@ -28,6 +28,13 @@ class Toolbar extends Component {
     render() {
 
         const {journeys} = this.state;
+    
+        if (journeys.type === "resturant") {
+            <p>circle</p>
+        }
+        else (
+            <p>bonsoir</p>
+        )
         return (
             <div>
                 <form className='form-inline' onSubmit= {(e) => {this.addItem(e)}}>  {/*onsubmit permet d'ecouter la soumission du formulaire et aussi de permettre l'action d'une api*/}
@@ -42,7 +49,7 @@ class Toolbar extends Component {
                     <ul className='step'>
                     {journeys.map((journey) =>
                     <li key={journey.id}>
-                        <div className='circle'></div>
+                       <div className='circle'></div>
                         </li>
                     )}
                 </ul>
