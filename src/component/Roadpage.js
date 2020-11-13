@@ -1,4 +1,3 @@
-
 import Map from "./Map";
 import JourneyBar from "./JourneyBar";
 import { Component } from "react";
