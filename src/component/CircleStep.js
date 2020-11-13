@@ -24,15 +24,7 @@ const decideColor = (type) => {
             }
             break;
             
-        case 'shopping':
-            console.log('je suis dans shopping.');
-            return {
-                backgroundColor : "blu",
-                borderRadius: '50%',
-                height: '20px',
-                width: '20px'
-            }
-            break;
+        
         default:
             return {
                 backgroundColor : "orange",
