@@ -8,7 +8,8 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import { withRouter } from "react-router-dom";
+
+import {withRouter} from "react-router-dom"
 
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
 
@@ -108,4 +109,4 @@ class Map extends Component {
   }
 }
 
-export default withRouter(Map);
+export default  withRouter(Map);
