@@ -1,4 +1,3 @@
-
 import Map from "./Map";
 import JourneyBar from "./JourneyBar";
 import { Component } from "react";
@@ -39,4 +38,9 @@ class Roadpage extends Component {
     }
 }
     
+<<<<<<< HEAD
 export default Roadpage;
+=======
+
+export default Roadpage;
+>>>>>>> e26d10990e4084797117ec52a3e1bcefbb0f5f90

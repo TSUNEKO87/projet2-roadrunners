@@ -27,21 +27,20 @@
 }
 
 #rouge {
-  color: #fa7f72;
+    color:#FA7F72;
 }
-
-.plan-trip {
-  display: flex;
-  flex-direction: column;
-  background-color: #f5a25d;
-  height: 22vh;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 0px;
-  margin-bottom: -39px;
-  border-top: 6px solid #fa7f72;
-  border-bottom: 6px solid #fa7f72;
+.plan-trip{
+    display: flex;
+    flex-direction: column;
+    background-color: #F5A25D;
+    height: 22vh;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0px;
+    margin-bottom: -39px;
+    border-top:6px solid #FA7F72;
+    border-bottom: 6px solid #FA7F72 ;
 }
 
 .plantrip-text {
@@ -67,19 +66,20 @@
   box-shadow: rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.3) 0px 3px 15px;
 }
 
-.slogan-header {
-  position: relative;
-  top: 15%;
-  left: 5%;
-  font-family: "Carter One", cursive;
-  width: 90%;
-  margin: 0px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 54px;
-  line-height: 131.4%;
+.slogan-header{
+    position: relative;
+    top: 15%;
+    left: 5%;
+    font-family: 'Carter One', cursive;
+    width: 90%;
+    margin: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54px;
+    line-height: 131.4%;
   color: #389393;
 }
+
 .text-header {
   position: relative;
   top: 0%;
