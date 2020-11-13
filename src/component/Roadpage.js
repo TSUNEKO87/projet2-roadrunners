@@ -9,7 +9,7 @@ class Roadpage extends Component {
     constructor(props){
         super(props)
         this.state = {
-            journeys: []
+            journeys: [{type:'restaurant', name:'restaurant Americain',}]
         }
     }
 
@@ -39,5 +39,4 @@ class Roadpage extends Component {
     }
 }
     
-
 export default Roadpage;

@@ -7,7 +7,7 @@ class JourneyBar extends Component {
     constructor(props){
         super(props)
         this.state = {
-             journeys : []   
+             journeys : [{type:'restaurant', name:'restaurant Americain',}]   
         }    
     }
     render() {
