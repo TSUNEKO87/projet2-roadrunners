@@ -8,6 +8,7 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
+import { withRouter } from "react-router-dom";
 
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
 
@@ -37,14 +38,11 @@ class Map extends Component {
     this.state = {
       response: null,
       travelMode: "DRIVING",
-      origin: "",
-      destination: "",
+      origin: this.props.location.state.start,
+      destination: this.props.location.state.end,
     };
   }
   directionsCallback = (response) => {
-    //I don't understand this part, what does response is supposed to do ? is it useful ?
-    console.log(response);
-
     if (response !== null) {
       if (response.status === "OK") {
         this.setState(() => ({ response }));
@@ -82,40 +80,6 @@ class Map extends Component {
     return (
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <div>
-          <div className="row">
-            <div className="col-md-6 col-lg-4">
-              <div className="form-group">
-                <label htmlFor="ORIGIN">Origin</label>
-                <br />
-                <input
-                  id="ORIGIN"
-                  className="form-control"
-                  type="text"
-                  ref={this.getOrigin}
-                />
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-4">
-              <div className="form-group">
-                <label htmlFor="DESTINATION">Destination</label>
-                <br />
-                <input
-                  id="DESTINATION"
-                  className="form-control"
-                  type="text"
-                  ref={this.getDestination}
-                />
-              </div>
-            </div>
-            <button
-              className="btn btn-primary"
-              type="button"
-              onClick={this.onClick}
-            >
-              Build Route
-            </button>
-          </div>
-
           <GoogleMap
             center={center}
             zoom={10}
@@ -144,4 +108,4 @@ class Map extends Component {
   }
 }
 
-export default Map;
+export default withRouter(Map);

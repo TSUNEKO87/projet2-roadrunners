@@ -1,38 +1,24 @@
-import {
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import React from 'react';
-import Navbar from './component/Navbar'
-import Footer from './component/Footer'
-import Homepage from './component/Homepage';
-import Map from "./component/Map";
-
+import { Switch, Route, Link } from "react-router-dom";
+import React from "react";
+import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
+import Homepage from "./component/Homepage";
+import RoadPage from "./component/Roadpage";
 
 function App() {
-
-  function TestRouter () {
-    return(
-        <p>This is a test</p>
-    )
-}
-
   return (
     <div className="App">
-            <div>
-             <Map />
-    
-              <Navbar /> 
-                <Switch>
-                    <Route exact path='/'>
-                      <Homepage />  
-                    </Route>
-                    <Route path='/application'>
-                        <TestRouter />
-                    </Route>
-                </Switch>
-            </div>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
+          <Route path="/application">
+            <RoadPage />
+          </Route>
+        </Switch>
+      </div>
     </div>
   );
 }

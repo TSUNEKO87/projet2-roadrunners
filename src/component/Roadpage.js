@@ -1,14 +1,13 @@
-import React, {Component} from 'react';
-
-
-
+import Map from "./Map";
+import DisplayEditor from "./DisplayEditor";
 
 function Roadpage(props) {
-    return(
-        <>
-            {/* Kacper's map composent */}
-        </>
-    )
+  return (
+    <div>
+      <DisplayEditor />
+      <Map />
+    </div>
+  );
 }
 
 export default Roadpage;
