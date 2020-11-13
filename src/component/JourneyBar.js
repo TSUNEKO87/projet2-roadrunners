@@ -1,7 +1,9 @@
+import { Circle } from '@react-google-maps/api';
 import React, {Component} from 'react';
-import './Toolbar.css';
+import CircleStep from './CircleStep';
+import './JourneyBar.css';
 
-class Toolbar extends Component {
+class JourneyBar extends Component {
     constructor(props){
         super(props)
         this.state = {
@@ -9,15 +11,14 @@ class Toolbar extends Component {
         }    
     }
 
-    addItem = (e) => {
+    addOneStep = (e) => {
         e.preventDefault();
         {/*const newStep = this.newStep.value */}
          const newStep = {
             id:this.state.journeys.length +1,
             name: this.newStep.value,
-            type: ''
+            type: 'shopping'
         }
-
 
         this.setState({
             journeys: [...this.state.journeys, newStep]
@@ -28,16 +29,9 @@ class Toolbar extends Component {
     render() {
 
         const {journeys} = this.state;
-    
-        if (journeys.type === "resturant") {
-            <p>circle</p>
-        }
-        else (
-            <p>bonsoir</p>
-        )
         return (
             <div>
-                <form className='form-inline' onSubmit= {(e) => {this.addItem(e)}}>  {/*onsubmit permet d'ecouter la soumission du formulaire et aussi de permettre l'action d'une api*/}
+                <form className='form-inline' onSubmit= {(e) => {this.addOneStep(e)}}>  {/*onsubmit permet d'ecouter la soumission du formulaire et aussi de permettre l'action d'une api*/}
                 <label htmlFor='newStepInput'>add new step</label>
                 <input ref={input => this.newStep = input} value={this.state.newStep} type='text'  placeholder='cinema' id='newStepInput'/>
                 <input type='submit' value='Start !' />
@@ -47,9 +41,9 @@ class Toolbar extends Component {
 
                 <div className='journey'>
                     <ul className='step'>
-                    {journeys.map((journey) =>
+                    {this.props.journeys.map((journey) =>
                     <li key={journey.id}>
-                       <div className='circle'></div>
+                       <CircleStep type={journey.type }/>  {/*passer une props au parents*/}
                         </li>
                     )}
                 </ul>
@@ -61,4 +55,4 @@ class Toolbar extends Component {
         )
     }
 }
-export default Toolbar;
+export default JourneyBar;

@@ -1,16 +1,21 @@
 
 import Map from "./Map";
-import Toolbar from "./Toolbar";
+import JourneyBar from "./JourneyBar";
+import { Component } from "react";
 
 
 
-function Roadpage(props) {
-    return(
+class Roadpage extends Component {
+    render(){
+         return(
        <div>
            <Map />
-           <Toolbar/>
+           <JourneyBar/>
        </div>
     )
+        
+    }
 }
+    
 
 export default Roadpage;
