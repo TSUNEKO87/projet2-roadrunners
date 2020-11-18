@@ -10,13 +10,16 @@ import "./DisplayEditor.css";
 function FoodPlaces(props) {
   return (
     <div>
-      <div>
+      <div className="scroll">
         {props.info
           .filter((restaurant) => restaurant.types.includes("food"))
-          .map((filteredPlaces) => (
-            <div className="places-disposition">
-              <p>{filteredPlaces.name}</p>
-              <p>{filteredPlaces.vicinity}</p>
+          .map((filteredPlace) => (
+            <div
+              onClick={() => props.addOneStep(filteredPlace, "food")}
+              className="places-disposition"
+            >
+              <p>{filteredPlace.name}</p>
+              <p>{filteredPlace.vicinity}</p>
             </div>
           ))}
       </div>

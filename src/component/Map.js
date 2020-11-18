@@ -8,9 +8,7 @@ import {
   Marker,
   InfoWindow,
 } from "@react-google-maps/api";
-import {withRouter} from 'react-router-dom';
-
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom";
 
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
 
@@ -34,6 +32,8 @@ const options = {
   // },
 };
 
+const waypts = [];
+
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -41,10 +41,11 @@ class Map extends Component {
       response: null,
       travelMode: "DRIVING",
       origin: this.props.location.state.start,
+
       destination: this.props.location.state.end,
     };
+    console.log(this.props.location);
   }
-
   directionsCallback = (response) => {
     if (response !== null) {
       if (response.status === "OK") {
@@ -59,13 +60,6 @@ class Map extends Component {
     checked && this.setState(() => ({ travelMode: "DRIVING" }));
   }
 
-  getOrigin = (ref) => {
-    this.origin = ref;
-  };
-  getDestination = (ref) => {
-    this.destination = ref;
-  };
-
   onClick = () => {
     if (this.origin.value !== "" && this.destination.value !== "") {
       this.setState({
@@ -74,16 +68,10 @@ class Map extends Component {
       });
     }
   };
-  onMapClick = (...args) => {
-    //I don't understand this part
-    console.log("OnClick args: ", args);
-  };
-
-
   render() {
     console.log(this.props.location.state);
     return (
-      <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>   
+      <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <div>
           <GoogleMap
             center={center}
@@ -113,8 +101,4 @@ class Map extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default withRouter(Map);
-=======
-export default  withRouter(Map);
->>>>>>> e26d10990e4084797117ec52a3e1bcefbb0f5f90

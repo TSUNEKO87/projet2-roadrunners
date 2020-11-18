@@ -10,13 +10,18 @@ import "./DisplayEditor.css";
 function Events(props) {
   return (
     <div>
-      <div>
+      <div className="scroll">
         {props.info
           .filter((event) => event.types.includes("point_of_interest"))
-          .map((filteredPlaces) => (
-            <div className="places-disposition">
-              <p>{filteredPlaces.name}</p>
-              <p>{filteredPlaces.vicinity}</p>
+          .map((filteredPlace) => (
+            <div
+              onClick={() =>
+                props.addOneStep(filteredPlace, "point_of_interest")
+              }
+              className="places-disposition"
+            >
+              <p>{filteredPlace.name}</p>
+              <p>{filteredPlace.vicinity}</p>
             </div>
           ))}
       </div>
