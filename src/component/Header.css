@@ -1,4 +1,5 @@
 .Header {
+<<<<<<< HEAD
     
     height: 88vh;
     width: 100%;
@@ -11,29 +12,45 @@
     color: black; 
     flex-direction: column;
     justify-content: space-between;
+=======
+  height: 88vh;
+  width: 100%;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  background-image: url("https://img-0.journaldunet.com/TUIoMZoSVMCDMXl0WUNfotBBS8U=/1280x/smart/2b7b473c1ebe416ead81f3f6179a1d75/ccmcms-jdn/11436203.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  flex-direction: column;
+  justify-content: space-between;
+>>>>>>> e26d10990e4084797117ec52a3e1bcefbb0f5f90
 }
 
+.header-box {
+  /*grey opacity*/
 
-.header-box{  /*grey opacity*/
-   
-    width: 100%;
-    padding: 0px;
-    margin-top: 0px;
-    height: 87vh;
-    margin-right: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #ebebebd0;
-    
-   
+  width: 100%;
+  padding: 0px;
+  margin-top: 0px;
+  height: 87vh;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #ebebebd0;
 }
 
 #rouge {
+<<<<<<< HEAD
     color: #FA7F72;
 }
 
    
+=======
+    color:#FA7F72;
+}
+>>>>>>> e26d10990e4084797117ec52a3e1bcefbb0f5f90
 .plan-trip{
     display: flex;
     flex-direction: column;
@@ -49,28 +66,27 @@
 }
 
 .plantrip-text {
-    font-family: Prompt;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 50px;
-    line-height: 82px;
-    color: #E5E5E5;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Prompt;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 82px;
+  color: #e5e5e5;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.RequestForm{
-    display: flex;
-    margin: 0px;
-    width: 60%;
-    height: 70px;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: 15px;
-    background-color: rgb(247, 247, 247);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.3) 0px 3px 15px;
+.RequestForm {
+  display: flex;
+  margin: 0px;
+  width: 60%;
+  height: 70px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 15px;
+  background-color: rgb(247, 247, 247);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 16px 32px, rgba(0, 0, 0, 0.3) 0px 3px 15px;
 }
-
 
 .slogan-header{
     position: relative;
@@ -83,16 +99,17 @@
     font-weight: normal;
     font-size: 54px;
     line-height: 131.4%;
-    color: #389393;
+  color: #389393;
 }
-.text-header{
-    position: relative;
-    top: 0%;
-    left: 5%;
-    width: 700px;
-    font-family: 'Prompt', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 140.4%;
+
+.text-header {
+  position: relative;
+  top: 0%;
+  left: 5%;
+  width: 700px;
+  font-family: "Prompt", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 140.4%;
 }

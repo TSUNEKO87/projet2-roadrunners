@@ -10,6 +10,8 @@ import {
 } from "@react-google-maps/api";
 import {withRouter} from 'react-router-dom';
 
+import {withRouter} from "react-router-dom"
+
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
 
 // const google = window.google; //To define Google
@@ -44,9 +46,6 @@ class Map extends Component {
   }
 
   directionsCallback = (response) => {
-    //I don't understand this part, what does response is supposed to do ? is it useful ?
-    console.log(response);
-
     if (response !== null) {
       if (response.status === "OK") {
         this.setState(() => ({ response }));
@@ -114,4 +113,8 @@ class Map extends Component {
   }
 }
 
+<<<<<<< HEAD
 export default withRouter(Map);
+=======
+export default  withRouter(Map);
+>>>>>>> e26d10990e4084797117ec52a3e1bcefbb0f5f90
