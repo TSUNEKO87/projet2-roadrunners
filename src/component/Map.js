@@ -4,12 +4,9 @@ import {
   LoadScript,
   DirectionsService,
   DirectionsRenderer,
-  DistanceMatrixService,
-  Marker,
-  InfoWindow,
 } from "@react-google-maps/api";
 
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom";
 
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
 
@@ -57,13 +54,6 @@ class Map extends Component {
     checked && this.setState(() => ({ travelMode: "DRIVING" }));
   }
 
-  getOrigin = (ref) => {
-    this.origin = ref;
-  };
-  getDestination = (ref) => {
-    this.destination = ref;
-  };
-
   onClick = () => {
     if (this.origin.value !== "" && this.destination.value !== "") {
       this.setState({
@@ -71,10 +61,6 @@ class Map extends Component {
         destination: this.destination.value,
       });
     }
-  };
-  onMapClick = (...args) => {
-    //I don't understand this part
-    console.log("OnClick args: ", args);
   };
 
   render() {
@@ -109,4 +95,4 @@ class Map extends Component {
   }
 }
 
-export default  withRouter(Map);
+export default withRouter(Map);

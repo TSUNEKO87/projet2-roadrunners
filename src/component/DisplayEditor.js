@@ -11,6 +11,7 @@ import Hotels from "./Hotels";
 import FoodPlaces from "./FoodPlaces";
 import Events from "./Events";
 import axios from "axios";
+import Map from "./Map";
 
 const googleKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
@@ -63,13 +64,16 @@ export class DisplayEditor extends Component {
           <Link to="/application/events">Events</Link>
         </div>
         <Route path="/application/lodging">
-          <Hotels info={this.state.info} />
+          <Hotels info={this.state.info} addOneStep={this.props.addOneStep} />
         </Route>
         <Route path="/application/food">
-          <FoodPlaces info={this.state.info} />
+          <FoodPlaces
+            info={this.state.info}
+            addOneStep={this.props.addOneStep}
+          />
         </Route>
         <Route path="/application/events">
-          <Events info={this.state.info} />
+          <Events info={this.state.info} addOneStep={this.props.addOneStep} />
         </Route>
       </div>
     );
