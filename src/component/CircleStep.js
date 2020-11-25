@@ -5,7 +5,7 @@ const decideColor = (type) => {
     console.log(type)
 
     switch (type) {
-        case 'restaurant':
+        case 'lodging':
             console.log('je suis dans restaurant.');
             return {
                 backgroundColor : "red",
@@ -14,7 +14,18 @@ const decideColor = (type) => {
                 width: '20px'
             }
             break;
-        case 'hotel':
+
+             case 'point_of_interest':
+            console.log('je suis dans restaurant.');
+            return {
+                backgroundColor : "green",
+                borderRadius: '50%',
+                height: '20px',
+                width: '20px'
+            }
+            break;
+
+        case 'food':
             console.log('je suis dans hotel')
             return {
                 backgroundColor : "yellow",
@@ -24,10 +35,9 @@ const decideColor = (type) => {
             }
             break;
             
-        
         default:
             return {
-                backgroundColor : "orange",
+                backgroundColor : "black",
                 borderRadius: '50%',
                 height: '20px',
                 width: '20px'
@@ -35,7 +45,6 @@ const decideColor = (type) => {
     }
       
 }
-
 const CircleStep = (props) => {
       console.log(props)
 

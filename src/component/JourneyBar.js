@@ -1,4 +1,3 @@
-import { Circle } from '@react-google-maps/api';
 import React, {Component} from 'react';
 import CircleStep from './CircleStep';
 import './JourneyBar.css';
@@ -7,7 +6,7 @@ class JourneyBar extends Component {
     constructor(props){
         super(props)
         this.state = {
-             journeys : [{type:'restaurant', name:'restaurant Americain',}]   
+             journeys : []   
         }    
     }
     render() {
@@ -22,7 +21,7 @@ class JourneyBar extends Component {
                     <ul className='step'>
                         {this.props.journeys.map((journey) =>
                         <li key={journey.id}>
-                            <CircleStep type={journey.type }/>  {/*passer une props au parents*/}
+                            <CircleStep type={journey.type}/>  {/*passer une props au parents*/}
                         </li>
                         )}
                     </ul>

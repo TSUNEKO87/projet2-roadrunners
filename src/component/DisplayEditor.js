@@ -1,6 +1,4 @@
 import {
-  BrowserRouter,
-  Switch,
   Route,
   withRouter,
   Link,

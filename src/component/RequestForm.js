@@ -35,7 +35,7 @@ class RequestForm extends Component {
         <input
           type="text"
           value={this.state.start}
-          placeholder="depart"
+          placeholder="departure"
           onChange={this.handleChange}
           id="start"
           name="start"

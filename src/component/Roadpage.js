@@ -1,6 +1,7 @@
 import Map from "./Map";
 import JourneyBar from "./JourneyBar";
 import { Component } from "react";
+import { DisplayEditor } from "./DisplayEditor";
 
 
 
@@ -8,7 +9,7 @@ class Roadpage extends Component {
     constructor(props){
         super(props)
         this.state = {
-            journeys: [{type:'restaurant', name:'restaurant Americain',}]
+            journeys: [{type:'lodging', name:'restaurant Americain',}]
         }
     }
 
@@ -19,7 +20,7 @@ class Roadpage extends Component {
          const newStep = {
             id:this.state.journeys.length +1,
             name: this.newStep.value,
-            type: 'restaurant'
+            type: ''
         }
         
         this.setState({
@@ -30,6 +31,7 @@ class Roadpage extends Component {
     render(){
          return(
        <div>
+           <DisplayEditor/> 
            <Map />
            <JourneyBar journeys={this.state.journeys} />
        </div>
@@ -38,9 +40,4 @@ class Roadpage extends Component {
     }
 }
     
-<<<<<<< HEAD
 export default Roadpage;
-=======
-
-export default Roadpage;
->>>>>>> e26d10990e4084797117ec52a3e1bcefbb0f5f90
