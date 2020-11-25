@@ -1,19 +1,20 @@
 import "./DisplayEditor.css";
 
 function Hotels(props) {
-  console.log(props.info);
+  console.log(props);
   return (
-    <div>
-      <div>
-        {props.info
-          .filter((hotel) => hotel.types.includes("lodging"))
-          .map((filteredPlaces) => (
-            <div className="places-disposition">
-              <p>{filteredPlaces.name}</p>
-              <p>{filteredPlaces.vicinity}</p>
-            </div>
-          ))}
-      </div>
+    <div className="scroll">
+      {props.info
+        .filter((hotel) => hotel.types.includes("lodging"))
+        .map((filteredPlace) => (
+          <div
+            onClick={() => props.addOneStep(filteredPlace, "lodging")}
+            className="places-disposition"
+          >
+            <p>{filteredPlace.name}</p>
+            <p>{filteredPlace.vicinity}</p>
+          </div>
+        ))}
     </div>
   );
 }

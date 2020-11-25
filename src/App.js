@@ -3,7 +3,7 @@ import React from "react";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
 import Homepage from "./component/Homepage";
-import RoadPage from "./component/Roadpage";
+import Roadpage from "./component/Roadpage";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
             <Homepage />
           </Route>
           <Route path="/application">
-            <RoadPage />
+            <Roadpage />
           </Route>
         </Switch>
       </div>

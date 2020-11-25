@@ -33,6 +33,10 @@
     padding: 0 10px;
   }
 
+  .scroll{
+    overflow: auto;
+    height: 260px;
+}
 
 
   
