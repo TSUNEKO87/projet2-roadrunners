@@ -7,7 +7,7 @@ class PlanTrip extends Component{
   render() {
     return (
         <div className="plan-trip">
-            <p>START YOUR JOURNEY NOW !</p>
+            <p className="plantrip-text">Start your journey now !</p>
             <RequestForm/>
         </div>
     );

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Navbar.css';
 import Logo from './logo.png'
 
-class Navbar extends React.Component {
+class Navbar extends Component {
     render() {
         return (
             <div>
