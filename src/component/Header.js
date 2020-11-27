@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./Header.css";
 import PlanTrip from "./PlanTrip";
 
-
 class Header extends Component {
   render() {
     return (

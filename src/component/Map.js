@@ -5,7 +5,6 @@ import {
   DirectionsService,
   DirectionsRenderer,
 } from "@react-google-maps/api";
-
 import { withRouter } from "react-router-dom";
 
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
@@ -30,6 +29,8 @@ const options = {
   // },
 };
 
+const waypts = [];
+
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -37,6 +38,7 @@ class Map extends Component {
       response: null,
       travelMode: "DRIVING",
       origin: this.props.location.state.start,
+
       destination: this.props.location.state.end,
     };
   }
@@ -62,7 +64,6 @@ class Map extends Component {
       });
     }
   };
-
   render() {
     return (
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
