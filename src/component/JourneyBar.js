@@ -13,7 +13,7 @@ class JourneyBar extends Component {
     const { journeys } = this.state;
     return (
       <div className="toolbar">
-        <div className="start">Start!</div>
+        <div className="start"></div>
 
         <div className="journey">
           <ul className="step">
