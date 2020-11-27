@@ -32,3 +32,33 @@ p {
   overflow: auto;
   height: 260px;
 }
+<<<<<<< HEAD
+=======
+
+  .categories {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f5a25d;
+  }
+
+  .places-disposition {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    
+  }
+
+  p{
+    padding: 0 10px;
+  }
+
+  .scroll{
+    overflow: auto;
+    height: 260px;
+}
+
+
+  
+>>>>>>> c3816edeac6d4d3a50e393fe5692282057759190

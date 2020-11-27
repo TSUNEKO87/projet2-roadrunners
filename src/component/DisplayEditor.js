@@ -11,6 +11,7 @@ import Hotels from "./Hotels";
 import FoodPlaces from "./FoodPlaces";
 import Events from "./Events";
 import axios from "axios";
+import Map from "./Map";
 
 const googleKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { Circle } from "@react-google-maps/api";
+=======
+>>>>>>> c3816edeac6d4d3a50e393fe5692282057759190
 import React, { Component } from "react";
 import CircleStep from "./CircleStep";
 import "./JourneyBar.css";

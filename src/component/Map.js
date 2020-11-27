@@ -4,10 +4,11 @@ import {
   LoadScript,
   DirectionsService,
   DirectionsRenderer,
-  DistanceMatrixService,
-  Marker,
-  InfoWindow,
 } from "@react-google-maps/api";
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3816edeac6d4d3a50e393fe5692282057759190
 import { withRouter } from "react-router-dom";
 
 // import { getGeocode, getLatLng } from "use-places-autocomplete";
@@ -68,6 +69,10 @@ class Map extends Component {
       });
     }
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3816edeac6d4d3a50e393fe5692282057759190
   render() {
     console.log(this.props.location.state);
     return (
