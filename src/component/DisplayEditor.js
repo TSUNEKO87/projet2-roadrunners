@@ -59,9 +59,15 @@ export class DisplayEditor extends Component {
     return (
       <div className="editor">
         <div className="categories">
-          <Link to="/application/lodging">Lodging</Link>
-          <Link to="/application/food">Restaurants</Link>
-          <Link to="/application/events">Events</Link>
+          <Link to="/application/lodging">
+            <i class="fas fa-bed"></i>
+          </Link>
+          <Link to="/application/food">
+            <i class="fas fa-utensils"></i>
+          </Link>
+          <Link to="/application/events">
+            <i class="far fa-calendar-plus"></i>
+          </Link>
         </div>
         <Route path="/application/lodging">
           <Hotels info={this.state.info} addOneStep={this.props.addOneStep} />

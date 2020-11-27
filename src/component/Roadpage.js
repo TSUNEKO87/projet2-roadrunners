@@ -12,7 +12,6 @@ class Roadpage extends Component {
   }
 
   addOneStep = (info, hardType) => {
-    console.log(info);
     let type = "";
     if (info.types.includes("food") && info.types.includes("restaurant")) {
       type = "food";

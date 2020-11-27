@@ -41,7 +41,6 @@ class Map extends Component {
 
       destination: this.props.location.state.end,
     };
-    console.log(this.props.location);
   }
   directionsCallback = (response) => {
     if (response !== null) {
@@ -66,7 +65,6 @@ class Map extends Component {
     }
   };
   render() {
-    console.log(this.props.location.state);
     return (
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}>
         <div>

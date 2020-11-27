@@ -3,7 +3,8 @@
   margin: 0;
 }
 .editor {
-  height: 300px;
+  height: 500px;
+  border-radius: 3%;
   width: 300px;
   color: blue;
   background-color: #ebebeb;
@@ -11,7 +12,7 @@
   z-index: 2000;
   position: absolute;
   top: 10%;
-  left: 70%;
+  left: 77%;
 }
 .categories {
   display: flex;
@@ -30,5 +31,10 @@ p {
 }
 .scroll {
   overflow: auto;
-  height: 260px;
+  height: 480px;
+}
+
+.place-img {
+  width: 280px;
+  height: 230px;
 }
